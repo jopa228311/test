@@ -1,59 +1,94 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Extradite Gifts</title>
-    <meta name="telegram:viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background: #ffffff;
+            background-color: rgb(17, 17, 17);
             margin: 0;
-            padding: 16px;
-            color: #000000;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: white;
+        }
+        
+        .container {
+            background-color: rgb(34, 34, 34);
+            border-radius: 16px;
+            padding: 32px;
+            width: 80%;
+            max-width: 400px;
             text-align: center;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         }
+        
+        .logo {
+            width: 100px;
+            height: 100px;
+            margin: 20px auto;
+            border-radius: 50%;
+            background-color: rgb(51, 51, 51);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; /* Обрезает изображение если оно больше контейнера */
+        }
+        
+        .logo img {
+            width: 100%; /* Заполняет весь контейнер */
+            height: 100%;
+            object-fit: cover; /* Сохраняет пропорции изображения */
+        }
+        
         h1 {
+            color: #ffffff;
+            margin: 0;
             font-size: 24px;
-            margin-bottom: 8px;
+            font-weight: 600;
         }
-        h2 {
-            font-size: 20px;
-            color: #0088cc;
-            margin-top: 0;
-            margin-bottom: 16px;
+        
+        .not-logged {
+            font-weight: bold;
+            font-size: 18px;
+            margin: 24px 0 8px 0;
+            color: #ffffff;
         }
-        .divider {
-            height: 1px;
-            background: #e7e8ec;
-            margin: 16px 0;
-        }
-        .message {
-            margin: 24px 0;
+        
+        .instruction {
             font-size: 16px;
+            margin: 8px 0 24px 0;
+            color: #aaaaaa;
         }
-        .bot-link {
+        
+        .bot-name {
             color: #0088cc;
+            font-size: 16px;
             font-weight: 500;
-            text-decoration: none;
         }
     </style>
 </head>
 <body>
-    <h1>Extradite Gifts</h1>
-    <h2>@mrkt</h2>
-    
-    <div class="divider"></div>
-    
-    <div class="message">
-        <p>Вы не авторизованы</p>
-        <p>Чтобы начать, подключите аккаунт</p>
-        <a href="https://t.me/mrkt_extradite_gifts_bot" class="bot-link">@mrkt_extradite_gifts_bot</a>
+    <div class="container">
+        <h1>Extradite Gifts</h1>
+        
+        <div class="logo">
+            <!-- Замените "logo.png" на путь к вашему изображению -->
+            <img src="/тест/photo_2025-07-14_14-18-02.jpg" alt="Logo" style="width: 80%; height: auto;">
+        </div>
+        
+        <div class="not-logged">You are not logged in</div>
+        
+        <div class="instruction">To get started, you need to connect an account</div>
+        
+        <div class="bot-name">@mrkt_extradite_gifts_bot</div>
     </div>
 
     <script>
-        // Минимальный скрипт для проверки WebApp
         if (window.Telegram && Telegram.WebApp) {
             Telegram.WebApp.expand();
             Telegram.WebApp.ready();
