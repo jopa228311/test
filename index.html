@@ -20,34 +20,48 @@
         .container {
             background-color: rgb(34, 34, 34);
             border-radius: 16px;
-            padding: 32px;
+            padding: 40px 30px;
             width: 80%;
             max-width: 400px;
             text-align: center;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            /* Прямоугольная форма контейнера */
+            min-height: 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
         
         .logo {
-            width: 100px;       /* Ширина */
-            height: 150px;      /* Высота увеличена для прямоугольной формы */
-            margin: 20px auto;
-            background-color: rgb(51, 51, 51);
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 25px;
+            /* Квадратная форма лого */
+            border-radius: 0;
+            background-color: rgb(34, 34, 34);
             display: flex;
             justify-content: center;
             align-items: center;
             overflow: hidden;
-            border-radius: 8px; /* Легкое скругление углов */
+            border: 2px solid rgba(255,255,255,0.1);
         }
         
         .logo img {
             width: 100%;
             height: 100%;
-            object-fit: contain; /* Сохраняет пропорции изображения */
+            object-fit: cover;
+        }
+        
+        .content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
         
         h1 {
             color: #ffffff;
-            margin: 0;
+            margin: 0 0 15px;
             font-size: 24px;
             font-weight: 600;
         }
@@ -55,36 +69,37 @@
         .not-logged {
             font-weight: bold;
             font-size: 18px;
-            margin: 24px 0 8px 0;
+            margin: 15px 0;
             color: #ffffff;
         }
         
         .instruction {
             font-size: 16px;
-            margin: 8px 0 24px 0;
+            margin: 10px 0 20px;
             color: #aaaaaa;
+            line-height: 1.4;
         }
         
         .bot-name {
             color: #0088cc;
             font-size: 16px;
             font-weight: 500;
+            margin: 20px 0 0;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Extradite Gifts</h1>
-        
         <div class="logo">
             <img src="IMG_3400-no-bg-preview (carve.photos).png" alt="Extradite Gifts Logo">
         </div>
         
-        <div class="not-logged">You are not logged in</div>
-        
-        <div class="instruction">To get started, you need to connect an account</div>
-        
-        <div class="bot-name">@mrkt_extradite_gifts_bot</div>
+        <div class="content">
+            <h1>Extradite Gifts</h1>
+            <div class="not-logged">You are not logged in</div>
+            <div class="instruction">To get started, you need to connect an account</div>
+            <div class="bot-name">@mrkt_extradite_gifts_bot</div>
+        </div>
     </div>
 
     <script>
